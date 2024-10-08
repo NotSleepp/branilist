@@ -38,8 +38,8 @@ type Category = {
 }
 
 const defaultCategories: string[] = [
-  "Alimentos",
-  "Hogar",
+  "Comidas",
+  "Casa",
   "Ropa",
   "Libros",
   "Regalos",
@@ -435,7 +435,7 @@ export default function ListaComprasOtgwMejorada() {
             transition={{ duration: 0.5 }}
             className="flex justify-between items-center mb-8"
           >
-            <h1 className="text-4xl font-bold text-center text-[#8B4513]">Lista de Compras del Bosque</h1>
+            <h1 className="text-4xl font-bold text-center text-[#8B4513]">Lista de Compras &lt;3♡</h1>
             <div className="flex items-center space-x-4">
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -463,7 +463,7 @@ export default function ListaComprasOtgwMejorada() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="col-span-1">
                 <Label htmlFor="new-item" className={`text-lg font-semibold mb-2 block ${darkMode ? 'text-[#F0E6D2]' : 'text-[#8B4513]'}`}>
-                  Nuevo Artículo
+                  Nombre
                 </Label>
                 <Input
                   id="new-item"
@@ -476,7 +476,7 @@ export default function ListaComprasOtgwMejorada() {
                       ? 'bg-[#3A3A3A] border-[#5C5C5C] focus:border-[#8B4513] focus:ring-[#8B4513] text-[#F0E6D2]'
                       : 'bg-[#FFF8E7] border-[#D2B48C] focus:border-[#8B4513] focus:ring-[#8B4513] text-[#4A4A4A]'
                   }`}
-                  placeholder="Añade un artículo..."
+                  placeholder="Nombre"
                 />
               </div>
               <div className="col-span-1">
@@ -504,7 +504,7 @@ export default function ListaComprasOtgwMejorada() {
                 <Label htmlFor="icon" className={`text-lg font-semibold mb-2 block ${darkMode ? 'text-[#F0E6D2]' : 'text-[#8B4513]'}`}>Icono</Label>
                 <Select value={newIcon} onValueChange={setNewIcon}>
                   <SelectTrigger id="icon" className={`border-2 focus:ring-2 text-lg py-3 ${darkMode ? 'bg-[#3A3A3A] border-[#5C5C5C] focus:border-[#8B4513] focus:ring-[#8B4513] text-[#F0E6D2]' : 'bg-[#FFF8E7] border-[#D2B48C] focus:border-[#8B4513] focus:ring-[#8B4513] text-[#4A4A4A]'}`}>
-                    <SelectValue placeholder="Elige un icono" />
+                    <SelectValue placeholder="Eligí un icono" />
                   </SelectTrigger>
                   <SelectContent className="z-50">
                     {iconOptions.map((icon) => (
@@ -530,7 +530,7 @@ export default function ListaComprasOtgwMejorada() {
               </Label>
             </div>
             <Button onClick={addItem} className={`w-full mt-4 text-lg py-6 ${darkMode ? 'bg-[#8B4513] hover:bg-[#A0522D] text-[#F0E6D2]' : 'bg-[#D2B48C] hover:bg-[#CD853F] text-[#4A4A4A]'}`}>
-              <Plus className="mr-2 h-5 w-5" /> Añadir
+              <Plus className="mr-2 h-5 w-5" /> Agregar
             </Button>
           </motion.div>
 
@@ -563,7 +563,7 @@ export default function ListaComprasOtgwMejorada() {
                   <SelectValue placeholder="Ordenar por" />
                 </SelectTrigger>
                 <SelectContent className="z-50">
-                  <SelectItem value="dateAdded">Fecha añadido</SelectItem>
+                  <SelectItem value="dateAdded">Fecha</SelectItem>
                   <SelectItem value="alphabetical">Alfabético</SelectItem>
                 </SelectContent>
               </Select>
@@ -696,14 +696,14 @@ export default function ListaComprasOtgwMejorada() {
           <Dialog>
             <DialogTrigger asChild>
               <Button className={`mt-8 ${darkMode ? 'bg-[#8B4513] hover:bg-[#A0522D] text-[#F0E6D2]' : 'bg-[#D2B48C] hover:bg-[#CD853F] text-[#4A4A4A]'}`}>
-                <Plus className="mr-2 h-4 w-4" /> Añadir Nueva Categoría
+                <Plus className="mr-2 h-4 w-4" /> Agregar Nueva Categoría
               </Button>
             </DialogTrigger>
             <DialogContent className={`z-50 ${darkMode ? 'bg-[#3A3A3A] text-[#F0E6D2]' : 'bg-[#FFF8E7] text-[#4A4A4A]'}`}>
               <DialogHeader>
-                <DialogTitle>Añadir Nueva Categoría</DialogTitle>
+                <DialogTitle>Agregar Nueva Categoría</DialogTitle>
                 <DialogDescription>
-                  Ingrese el nombre de la nueva categoría que desea añadir a su lista de compras.
+                  
                 </DialogDescription>
               </DialogHeader>
               <Input
