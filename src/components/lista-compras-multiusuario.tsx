@@ -718,7 +718,7 @@ export default function ListaComprasOtgwMejorada() {
           </Dialog>
         </div>
         <div className="mt-8 text-center opacity-75">
-          <p className={darkMode ? 'text-[#D2B48C]' : 'text-[#8B4513]'}>Lista de Compras del Bosque - Inspirada en "Over the Garden Wall"</p>
+          <p className={darkMode ? 'text-[#D2B48C]' : 'text-[#8B4513]'}>Lista de Compras Para comprar cositas con el amor de mi vida Brena"</p>
         </div>
       </div>
     </TooltipProvider>
